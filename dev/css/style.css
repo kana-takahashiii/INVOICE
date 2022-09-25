@@ -1,0 +1,1171 @@
+/* ----------------------------- */
+/* base
+/* ----------------------------- */
+html {
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.4rem;
+    font-weight: medium;
+    font-family:'Roboto','Noto Sans JP', sans-serif;    
+    color: #333333;
+    line-height: 1.5;
+    letter-spacing: .05em;
+}
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+a{
+    text-decoration: none;
+}
+
+/*-------------------------------------------
+header
+-------------------------------------------*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    /* padding: 27px 30px 26px; */
+    padding: 5%;
+}
+
+.logo {
+    width: 140px;
+    height: auto;
+    object-fit: cover;
+}
+
+.header .nav-list {
+    display: flex;
+    column-gap: 36px;
+}
+/*　ハンバーガーメニュー　PCディスプレイ時　非表示 */
+.header .burger-btn {
+    display: none;
+}
+
+
+/* nav- ホバー */
+.header .nav-list .nav-item a:hover {
+    color: #1E1E4B;
+}
+.header .nav-list .nav-item  a{
+    position: relative;
+    display: block;
+    line-height: 2em;
+}
+
+/* ホバー前の指定 */
+.header .nav-list .nav-item a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 0;  /* 線の出現する位置*/
+    /*線の形状*/
+    width: 100%;
+    height: 2px;
+    background:#1E1E4B;
+    /*アニメーションの指定*/
+    transition: all 0.3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center;/*左上基点*/
+}
+
+/* ホバー時の動きの指定 */
+.header .nav-list .nav-item a:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*//* X軸に1倍（100%）、
+    Y軸に1倍（2px）のまま動く */
+}
+
+/* // */
+.nav-item{
+    font-size: 1.6rem;
+}
+
+
+/*-------------------------------------------
+TOPページ - about　background-color
+-------------------------------------------*/
+.kv-wrap {
+    position: relative;
+    margin-bottom: 140px;
+    overflow: hidden;
+}
+.kv-wrap .color-box {
+    position: absolute;
+    z-index: -1;
+    top: 240px;
+    width: 100%;
+    /* height: 100%; */
+    height: calc(100% - 240px );
+    background-color: #F2F2F2;
+}
+
+/*-------------------------------------------
+PC   TOPページ - about news contact base
+-------------------------------------------*/
+.area-wrap {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1100px;
+    padding-bottom: 140px;
+}
+
+/* contact-wrap  imgを画面いっぱいに */
+#contact.area-wrap {
+    width: 100%;
+    max-width: 1440px;
+}
+
+.area-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 45px;
+}
+.area-sub{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.area-text {
+    font-size: 1.4rem;
+    margin-bottom: 45px;
+}
+
+/*-------------------------------------------
+TOPページ - kv
+-------------------------------------------*/
+.kv-area {
+    padding-left: 170px;
+    margin-left: auto;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    padding-bottom: 140px;
+}
+
+/* kvcopy */
+.kv-wrap .kv-cp .main-cp{
+    position: absolute;
+    /* 削除予定 */
+    /* top: 210px;
+    left: 15px; */
+    top: 20%;
+    left: 5%;
+}
+.kv-wrap .kv-cp .sub-cp {
+    position: relative;
+    top: 0;
+    font-size: clamp(6rem,9vw,10rem)
+}
+
+
+.kv-wrap .kv-text .main-cp{
+    font-size: clamp(2rem,5vw,7rem);
+    font-weight: bold;
+}
+/* subcopy - anime */
+.kv-text .sub-cp {
+    display: inline-block;
+    line-height: 30px;
+    padding-left: 100%;
+    white-space: nowrap;
+    animation: animate-banner 20s linear infinite;
+}
+  /* バナー内の要素をすべて選択 */
+.sub-cp {
+    display: inline-block;
+}
+.sub-cp .su{
+    color: #333333;
+    opacity: 0.3;
+}
+.sub-cp .yo{
+    color: #31A0DA;
+    opacity: 0.3;
+}
+/* 横にスクロールさせるアニメーション */
+@keyframes animate-banner {
+0% {
+    transform: translateX(0);
+    }
+100% {
+    transform: translateX(-100%);
+    }
+} 
+/* //subcopy - anime */
+
+/* TOP - scroll */
+.scroll {
+    position: absolute;
+    top: 666px;
+    right: calc(100% - 70px );
+}
+.kv-wrap .scroll a {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    padding: 10px 10px 110px;
+    overflow: hidden;
+    color: #333333;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: .2em;
+    writing-mode: vertical-lr;
+}
+
+/* 縦線 */
+.kv-wrap .scroll ::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 100px;
+    background: #333333;
+}
+
+.kv-wrap .scroll a::after {
+    height: 45px;
+    animation: sdl 3s ease infinite;
+}
+@keyframes sdl {
+0% {
+    transform: translateY(-70px);
+}
+50%, 100% {
+    transform: translateY(30px);
+}
+    }
+/* //TOP - scroll */
+
+/*-------------------------------------------
+///TOPページ - kv
+-------------------------------------------*/
+
+
+/*-------------------------------------------
+TOPページ - about
+-------------------------------------------*/
+
+.about-area {
+    display: flex;
+    column-gap: 100px;
+    align-items: center;
+}
+.ab-tx {
+    width: 50%;
+}
+
+#aboutus .about-img img {
+    aspect-ratio: 3 /2 ;
+    object-fit: cover;
+}
+
+#service .center-btn {
+    padding-top: 80px;
+    display: none;
+}
+
+.ab-tx .area-sub {
+margin-bottom: 30px;
+white-space: nowrap;
+}
+
+
+/*-------------------------------------------
+btn - all section
+-------------------------------------------*/
+.btn{
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+}
+
+.btn{
+    position: relative;
+    /* display: block; */
+    padding: 10px 25px;
+    /* margin: 0 auto; */
+    width: 100px;
+    font-size: 1.4rem ;
+    color: #fff;
+    text-align: center;
+    background: #1E1E4B ;
+    text-indent: 0.1em;
+    letter-spacing: 0.1em;
+}
+
+.btn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 1.5em;
+    margin: auto;
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    border-right: 1px solid #fff;
+    border-top: 1px solid #fff;
+    transform: rotate(45deg);
+    transition: right 0.5s;
+}
+
+.btn:hover:after{
+    right: 1em;
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /*色や形状*/
+    background:#31A0DA;/*背景色*/
+    color: #ffff;
+    width: 100%;
+    height: 100%;
+    /*アニメーション*/
+    transition: transform .6s cubic-bezier(0.8, 0, 0.2, 1) 0s;
+    transform: scale(0, 1);
+    transform-origin: right top;
+}
+.btn:hover:before{
+    transform-origin:left top;
+    transform:scale(1, 1);
+}
+.btn span {
+    position: relative;
+    z-index: 2;
+}
+.btn:after {
+    z-index: 3;
+}
+
+
+.btn:hover span{
+    color:#fff;
+}
+
+
+/* service contact - ボタンの位置中央揃え */
+.center-btn {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+/* //btn */
+
+
+
+/*-------------------------------------------
+TOPページ - service
+-------------------------------------------*/
+.tx-center {
+text-align: center;
+margin-bottom: 45px;
+}
+
+.serivice-area {
+    display: flex;
+    column-gap: 40px;
+    margin-bottom: 80px;
+}
+
+.serivice-area .number {
+    line-height: 1;
+    font-size: 14rem;
+    font-weight: 100;
+    opacity: 0.1;
+    font-style: italic; 
+} 
+
+.sec-1,.sec-2,.sec-3 { 
+    position: relative;
+    flex: 1;
+}
+
+.sec-1 .tx-1 {
+    position: absolute;
+    top: 125px;
+    left: 33px;
+}
+
+.sec-2 .tx-2 {
+    position: absolute;
+    top: 125px;
+    left: 33px;
+}
+
+
+.sec-3 .tx-3 {
+    position: absolute;
+    top: 125px;
+    left: 33px;
+}
+
+.sec-1,.sec-2,.sec-3,.tx-1,.tx-2,.tx-3 {
+    font-size: clamp(1.4rem,2vw,1.6rem);
+    font-weight:bold;
+    font-family: 'Noto Sans JP';
+
+}
+
+
+/*-------------------------------------------
+TOPページ - news
+-------------------------------------------*/
+#news ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-bottom: 45px;
+}
+
+#news.area-wrap {
+    padding: 100px 0;
+}
+
+#news .area-title {
+    margin-bottom: 45px;
+}
+
+#news .date-area {
+    display: flex;
+    align-items: flex-start;
+    gap: 52px;
+}
+
+#news .date-area .label {
+    padding: 3px 30px;
+}
+
+#news .date-area time {
+    min-width: 110px;
+}
+
+#news .date-area .label {
+    background-color: #31A0DA;
+    color: #ffff;
+    letter-spacing: .07em;
+    line-height: 1;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px 10px;
+    min-width: 90px;
+}
+#news .date-area .label-bg {
+    background-color: #1E1E4B;
+    color: #ffff;
+    letter-spacing: .07em;
+    line-height: 1;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px 10px;
+    min-width: 90px;
+}
+#news .date-area .label-bg p {
+    padding: 3px 30px;
+}
+
+/* てすと */
+/* nav- ホバー */
+.tx-nw:hover {
+    color: #333333;
+}
+.tx-nw{
+    position: relative;
+    display: block;
+    line-height: 2em;
+}
+
+/* ホバー前の指定 */
+.tx-nw::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 0;  /* 線の出現する位置*/
+    /*線の形状*/
+    width: 100%;
+    height: 2px;
+    background:#333333;
+    /*アニメーションの指定*/
+    transition: all 0.5s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center;/*左上基点*/
+}
+
+/* ホバー時の動きの指定 */
+.tx-nw:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*//* X軸に1倍（100%）、
+    Y軸に1倍（2px）のまま動く */
+}
+
+/* ・・ */
+
+
+
+
+/* 背景 */
+.top-news-wrap{
+    position: relative;
+}
+
+.top-news-wrap .top-color-box{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    height: 100%;
+    /* width: calc( 100% - 170px); */
+    /* margin-left: 170px; */
+    background-color: #F2F2F2;
+}
+
+
+
+
+/*-------------------------------------------
+TOPページ - contact
+-------------------------------------------*/
+#contact.area-wrap {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+    padding-bottom: 0;
+    margin-top: 140px;
+}
+
+.contact-txt {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    row-gap: 30px;
+    transform: translate(-50%, -50%);
+}
+
+/* #contact .area-title {
+    margin-top: 140px;
+} */
+
+#contact .area-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0;
+    /* position: absolute;
+    top: 112px;
+    text-align: center;
+    width: 100%; */
+}
+/* 
+#contact .center-btn {
+    position: absolute;
+    top: 182px;
+} */
+
+#contact .contact-text {
+    /* position: absolute;
+    top: 274px;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%; */
+    font-weight: 500;
+}
+
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+/* 背景ーグレー */
+    background-color : #F2F2F2;
+}
+
+#footer .footer-content {
+width: 80%;
+margin: 0 auto;
+padding: 61px 0 62px 0;
+}
+
+#footer .footer-area{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* address column */
+#footer .footer-item { 
+    flex-direction: column;
+}
+
+/* navlist　column */
+#footer .nav-list {
+    flex-direction: column;
+    display: grid;
+    gap: 20px;
+}    
+
+#footer .logo {
+    margin-bottom: 37px;
+}
+
+#footer .copy-right {
+    display: flex;
+    justify-content: flex-start;
+    /* justify-content: flex-end; */
+}
+
+#footer .copy-right p {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#footer .br-sp {
+    display: none;
+}
+
+#footer .footer-content  .footer-item li:nth-of-type(2) {
+    margin-bottom: 17px;
+}
+
+/*-------------------------------------------
+//
+-------------------------------------------*/
+
+
+/*-------------------------------------------
+pagetop　hover時
+-------------------------------------------*/
+/* pagetop text位置 */
+#footer {
+    position: relative;
+}
+.pagetop {
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    transform: rotate(90deg) translate(0, -50%);
+    transform-origin: center;
+    /* writing-mode: vertical-rl; */
+}
+/* //pagetop text位置 */
+
+
+/* 線の位置指定 */
+.pagetop a {
+    position: relative;
+    display: block;
+    line-height: 2em;
+}
+/* ホバー時のテキストカラー */
+.pagetop a:hover {
+    color: #1E1E4B;
+}
+/* ホバー前の指定 */
+.pagetop a::after {
+    content: '';
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: 0;
+    left: 0;  /* 線の出現する位置　例えばleft:20%の場合　geあたりから線が出る */
+    
+    /*線の形状*/
+    width: 100%;
+    height: 2px;
+    background:#1E1E4B;
+
+    /*アニメーションの指定*/
+    transition: all 0.3s;
+    transform: scale(0, 1);/*X方向0、Y方向1*/
+    transform-origin: center;/*左上基点*/
+}
+
+/* ホバー時の動きの指定 */
+.pagetop a:hover::after {
+    transform: scale(1, 1);/*X方向にスケール拡大*//* X軸に1倍（100%）、
+    Y軸に1倍（2px）のまま動く */
+}
+/*-------------------------------------------
+// footer
+-------------------------------------------*/
+
+
+/*-------------------------------------------
+@media Tablet - 768px
+-------------------------------------------*/
+@media screen and (max-width:768px) {
+    .header {
+        padding: 36px 85px 37px 85px;
+    }
+
+    .kv-area {
+        padding-left: 84px;
+        padding-bottom: 100px;
+    }
+
+
+    .kv-wrap .kv-text .main-cp {
+    font-weight: bold;
+    font-size: clamp(2rem,5vw,7rem);
+    }
+
+    .scroll {
+        display: none;
+    }
+
+    .kv-wrap {
+        position: relative;
+        margin-bottom: 0;
+    }
+
+    .kv-wrap .color-box {
+        position: absolute;
+        z-index: -1;
+        top: 240px;
+        width: 100%;
+        height: 100%;
+        height: calc(100% - 240px );
+        background-color: #F2F2F2;
+    }
+
+    #aboutus.area-wrap .about-area{
+        flex-direction: column-reverse;
+    }
+
+    /* 共通 width */
+    #aboutus.area-wrap,
+    #service.area-wrap,
+    #news.area-wrap {
+        /* max-width: 600px; */
+        /* width: 100%; */
+        width: 90vw;
+        padding-bottom: 100px;
+        margin: 0 auto;
+    }
+    /* // */
+
+
+    /* About us */
+    .about-area .about-img {
+        text-align: center;
+    }
+    .about-area .about-img img {
+        width: 50%;
+    }
+
+    #aboutus.area-wrap .about-area .ab-tx .area-title {
+        margin-bottom: 40px;
+    }
+    
+    /* ab-tx */
+    #aboutus.area-wrap .about-area .ab-tx {
+        text-align: center;
+        width: 100%;
+        padding: 40px 0;
+    }
+    .ab-tx .area-title {
+        margin-bottom: 40px;
+    } 
+    .ab-tx .area-sub {
+        margin-bottom: 20px;
+    }
+    .ab-tx .area-text {
+        margin-bottom: 40px
+    }
+    /* //ab-tx */
+
+    /* ボタン調整””” */
+    .btn {
+        font-size: 0.8rem;
+        padding: 6px 13px;
+    }
+
+
+    /* Service */
+    #service.area-wrap {
+        padding: 100px 0;
+    }
+    #service .serivice-area {
+        max-width: 464px;
+        gap: 60px;
+        margin: 0 auto;
+    }
+
+    #service.area-wrap .tx-center .area-title,.area-sub {
+        margin-bottom: 40px;
+    }
+    #service.area-wrap .tx-center .area-sub {
+        font-size: 1.6rem;
+    }
+    /* Service 123 */
+    #service.area-wrap .serivice-area {
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+    
+    #service.area-wrap .serivice-area p:first-of-type{
+        font-size: 10rem;
+    }
+    #service.area-wrap .serivice-area p:last-of-type{
+        top: 69px;
+        left: 3%;
+    }
+    #service.area-wrap .center-btn {
+        padding-top: 0;
+    }
+
+    /* News */
+    #news.area-wrap {
+        padding: 40px 0;
+    }
+
+    .top-color-box {
+    display: none;
+    }
+    .top-news-wrap {
+    background-color: #F2F2F2;
+    margin-bottom: 100px;
+    }
+
+    #news .area-title {
+        margin-bottom: 40px;
+    }
+    #news ul {
+    margin-bottom: 40px;
+    }
+
+    #contact.area-wrap {
+        padding-bottom: 0;
+    }
+
+
+    #contact.area-wrap .contact-txt {
+        row-gap: 20px;
+    }
+    #contact.area-wrap .contact-txt .center-btn {
+    padding-top: 0;
+    }
+    #footer .footer-content {
+        padding: 40px 0;
+        /* max-width: 600px; */
+        width: 90vw;
+
+    
+    
+    }
+
+    #footer .footer-content .footer-area {
+        margin-bottom: 35px;
+    }
+    #footer .footer-content .pagetop {
+        display: none;
+    }
+
+    /* ハンバーガーメニュー
+    開いたとき */
+    body.noscroll{
+        overflow: hidden;
+    }
+
+    .header nav {
+        z-index: 2;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #31A0DA;
+        color: #ffff;
+    }
+
+    .header .nav-list{
+        width: 600px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        /* nav-listアイテム */
+        display: grid;
+        row-gap: 40px;
+    }
+
+    /* // ハンバーガーメニュー　開いたとき */
+
+    /* ハンバーガーメニュー */
+    .header .burger-btn {
+        display :block;
+        /* width: 28px; */
+        width: 30px;
+        height: 30px;
+        position: relative;
+    }
+    .burger-btn .bar {
+        display: block;
+        width: 100%;
+        height: 2px;
+        border-radius: 1px;
+        background-color: #333333;
+        position: absolute;
+        z-index: 9;
+    } 
+    /* メニュー　crossなし */
+    .burger-btn .bar_top {
+        top: 0;
+    }
+    .burger-btn .bar_middle {
+        top: 50%
+        /* top: calc( 50% - 1px ); */
+    }
+
+    .burger-btn .bar_bottom {
+        bottom: 0;
+    }
+    /* //ハンバーガーメニュー */
+
+    /* ハンバーガーメニュー crossついたとき  */
+    .burger-btn.cross .bar_top {
+        transform: rotate(45deg);
+        top: calc( 50% - 1px );
+        transition: .3s;
+        background-color: #ffff;
+    }
+    .burger-btn.cross .bar_middle {
+        opacity: 0;
+        transition: .3s;
+        background-color: #ffff;
+    } 
+    .burger-btn.cross .bar_bottom {
+        transform: rotate(-45deg);
+        bottom: calc( 50% - 1px );
+        transition: .3s;
+        background-color: #ffff;
+    } 
+
+}
+/*-------------------------------------------
+// @media Tablet - 768px
+-------------------------------------------*/
+
+
+/*-------------------------------------------
+@media sp - 375px
+-------------------------------------------*/
+    @media screen and (max-width:375px) {
+        /* header */
+        .header {
+            padding: 22px 15px 22px 15px;
+        }
+        .header .logo,.footer-wrap .logo{
+            width: 83px;
+        }
+
+        /* kv */
+        .kv-wrap .kv-area {
+            padding: 0 0 80px 0;
+        }
+        .kv-wrap .kv-area img {
+            aspect-ratio: 3 / 4;
+            object-fit: cover;
+        }
+        .kv-wrap .kv-area .kv-text .main-cp {
+            font-size: clamp(2rem,5vw,7rem);
+            top: 135px;
+        }
+
+
+        /* area-wrap */
+        #aboutus.area-wrap, #news.area-wrap, #footer .footer-area {    
+            margin: 0 auto;
+            width: 90vw;
+            padding-bottom: 0;
+        }
+        #service.area-wrap {
+            margin: 0 auto;
+            width: calc( 100% - 62px - 62px );
+            padding-bottom: 0;
+        }
+
+
+
+        .area-sub {
+            font-size: 1.6rem;
+        }
+        
+        .date-area {
+        flex-wrap: wrap;
+        }
+    
+        /*-------------------------------------------
+        about
+        -------------------------------------------*/
+        #aboutus.area-wrap .about-area .about-img img {
+            width: 100%;
+        }
+        #aboutus.area-wrap .about-area .ab-tx {
+            text-align: left;
+        }
+        .area-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        #aboutus.area-wrap .about-area .ab-tx .area-sub {
+            font-size: 2rem;
+            white-space: normal;
+        }
+
+        /*-------------------------------------------
+        Service
+        -------------------------------------------*/
+        #service.area-wrap {
+            padding-bottom: 80px;
+        }
+
+        #service.area-wrap .tx-center {
+            margin-bottom: 40px;
+        }
+
+        #service.area-wrap .serivice-area p:last-of-type{
+            white-space: normal;
+        }
+        #service.area-wrap .serivice-area p:first-of-type{
+            font-size: 7rem;
+        }
+        #service.area-wrap .serivice-area p:last-of-type{
+            top: 49px;
+            left: 0;
+            white-space: normal;
+        }
+        #service.area-wrap .serivice-area {
+            margin-bottom: 60px;
+            gap: 60px;
+        }
+
+
+        /*-------------------------------------------
+        News
+        -------------------------------------------*/
+        .top-news-wrap {
+            margin-bottom: 80px;
+            margin-bottom: 0;
+        }
+
+        #news.area-wrap {
+            padding-bottom: 40px;
+        }    
+
+        .top-news-wrap #news.area-wrap .date-area .label{
+            min-width: 50px;
+            font-size: 1rem;
+        }    
+        .top-news-wrap #news.area-wrap .date-area .label-bg {
+            min-width: 50px;
+            font-size: 1rem;
+        } 
+
+        .top-news-wrap #news.area-wrap .date-area {
+            row-gap: 15px;
+        }      
+        .top-news-wrap #news.area-wrap ul{
+            row-gap: 30px;
+        }         
+        #news .date-area {
+            gap: 10px;
+        }
+        #news .date-area time {
+            min-width: 80px;
+        }
+
+        
+        /*-------------------------------------------
+        contact
+        -------------------------------------------*/
+
+        #contact.area-wrap {
+            margin-top: 0;
+        }
+        #contact.area-wrap .contact-txt .area-title {
+            font-size: 1.6rem;
+        }
+        #contact.area-wrap .contact-txt .contact-text {
+            font-size: 1.4rem;
+            white-space: nowrap;
+        }
+        #contact.area-wrap .contact-img img {
+            object-fit: cover;
+            height: 194px;
+        }
+
+
+        /*-------------------------------------------
+        footer
+        -------------------------------------------*/
+        #footer .footer-content .footer-area .nav-list{
+            display: flex;
+            flex-direction: row;
+        }
+
+        #footer .logo {
+            margin-bottom: 30px;
+        }
+        .pagetop {
+            display: none;
+        }
+        .footer-item li:nth-child(2) {
+            margin-bottom: 10px;
+        }
+        .footer-wrap {
+            width: 50%;
+        }
+        #footer li {
+            /* white-space: nowrap; */
+            white-space: normal;
+            
+        }
+        #footer .br-sp {
+            display: block;
+        }
+        #footer .footer-area {
+            margin-bottom: 20px;
+        }
+        .footer-item li:nth-of-type(2){
+            margin-bottom: 15px;
+        }
+        #footer .pagetop {
+            display: none;
+        }
+
+        #footer .copy-right {
+            text-align: left;
+            display: block;
+            padding-left: 15px;
+        }
+
+        /* ハンバーガーメニュー */
+        .header .burger-btn {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+
+/*-------------------------------------------
+// @media sp - 375px
+-------------------------------------------*/
+
+

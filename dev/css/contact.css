@@ -1,0 +1,261 @@
+/*-------------------------------------------
+下層ページ　 -  contact
+-------------------------------------------*/
+.header-sub p{
+    display: none;
+}
+
+#article-contact.area-wrap {
+    padding: 140px 0;
+    margin: 0 auto;
+    /* max-width: 600px; */
+    flex-direction: column;
+}
+
+#article-contact .text-area p {
+    margin-bottom: 40px;
+}
+
+/* click　underline */
+#article-contact .text-area a:last-of-type {
+text-decoration-line: underline;
+}
+/* // */
+
+
+/* Form - 
+企業名〜メールアドレス */
+#article-contact .form input[type="text"],
+input[type="tell"],
+input[type="email"],
+textarea:last-of-type{
+    border: 1px #E5E5E5 solid;
+    background-color: rgb(229 229 229 / 50%);
+    width: 100%;
+    margin-bottom: 50px;
+    width: 100%;
+    max-width: 300px;
+}
+
+#article-contact .form input[type="text"],
+input[type="tell"],
+input[type="email"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 1;
+    padding: 8px 0 8px 5px;
+}
+
+#article-contact textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 12.6rem;
+    margin-bottom: 40px;
+    padding: 8px 0 8px 5px
+}
+
+/* チェックボックス */
+#article-contact .form .chk  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+#article-contact .form .chk  input {
+    margin-right: 5px;
+}
+#article-contact .form .chk  a {
+    text-decoration-line: underline;
+    color: #333333;
+}
+/* // */
+
+/* btn */
+#article-contact button{
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+}
+#article-contact button {
+    position: relative;
+    display: block;
+    padding: 10px 25px;
+    margin: 0 auto;
+    width: 100px;
+    font-size: 1.4rem ;
+    color: #fff;
+    text-align: center;
+    background: #1E1E4B ;
+    text-indent: 0.1em;
+    letter-spacing: 0.1em;
+    /* line-height: 1; */
+    /* background: #5bbee5;
+    background: linear-gradient(to right, #5bbee5, #52ddae); */
+    /* border-radius: 1.5em; */
+}
+#article-contact button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 1.5em;
+    margin: auto;
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    border-right: 1px solid #fff;
+    border-top: 1px solid #fff;
+    transform: rotate(45deg);
+    transition: right 0.5s;
+    }
+
+#article-contact button:hover:after{
+    right: 1em;
+}
+/* // */
+
+
+/* contact - wrap */
+#num.num-wrap{
+    position: relative;
+}
+
+#num.num-wrap .num-img {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+
+
+
+
+
+#num.num-wrap .num-img p {
+    line-height: 1;
+}
+
+/* pタグ奇数行のみのフォントサイズ指定 */
+#num.num-wrap .num-img p:nth-of-type(odd) {
+    font-size: clamp(1rem,3vw,3rem);
+    /* font-size: clamp(1.4rem,2vw,3rem); */
+    font-weight: bold;
+
+}
+
+/* pタグ2行目のみフォントサイズ指定 */
+#num.num-wrap .num-img p:nth-of-type(2) {
+    font-size: clamp(1.4rem,3vw,3rem);
+    font-weight: bold;
+    
+}
+
+
+
+
+/* // */
+
+
+/* label */
+.form .mast,.option {
+    color: #ffff;
+    font-size: 1rem;
+    letter-spacing: .05em;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px 4px;
+    min-width: 30px;
+}
+
+.form .mast{
+    background-color: #FF0000;
+    display: inline-block;
+}
+.form .option {
+    background-color: #1E1E4B;
+    display: inline-block;
+
+}
+
+/* 
+.form .mast{
+    background-color: #1E1E4B;
+    display: inline-block;
+} */
+
+.form-flex {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+
+/*-------------------------------------------
+@media Tablet - 768px
+-------------------------------------------*/
+@media screen and (max-width:768px) {
+    #article-contact.area-wrap {
+        padding: 100px 0;
+    }
+    /*  */
+    #article-contact .text-area p {
+        margin-bottom: 40px;
+    }
+    #article-contact .form input[type="text"],
+    input[type="tell"],
+    input[type="email"],
+    textarea:last-of-type{
+        margin-bottom: 50px;
+    }
+
+    .map {
+        padding: 100px 0;
+    }
+
+    /* footer */
+    .footer-item li:nth-of-type(2){
+        margin-bottom: 15px;
+    }
+    #footer .pagetop {
+        display: none;
+    }
+
+}
+
+/*-------------------------------------------
+@media SP - 375px
+-------------------------------------------*/
+@media screen and (max-width:375px) {
+    #article-contact.area-wrap {
+        padding: 80px 0;
+        width: 90%;
+        /* width: calc(100% - 30px ); */
+        margin: 0 auto;
+    }
+
+    #article-contact .form input[type="text"],
+    input[type="tell"],
+    input[type="email"],
+    textarea:last-of-type{
+        margin-bottom: 25px;
+    }
+
+    #article-contact textarea {
+        margin-bottom: 80px;
+    }
+    #footer .footer-content {
+        margin-top: 0;
+    }
+
+}
+
