@@ -803,6 +803,7 @@ pagetop　hover時
         max-width: 464px;
         gap: 60px;
         margin: 0 auto;
+        flex-direction: column;
     }
 
     #service.area-wrap .tx-center .area-title,.area-sub {
