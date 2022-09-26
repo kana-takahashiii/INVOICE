@@ -1010,7 +1010,8 @@ pagetop　hover時
         
         .date-area {
         flex-wrap: wrap;
-        }
+        gap: 20px;
+        }   
     
         /*-------------------------------------------
         about
