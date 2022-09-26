@@ -150,13 +150,11 @@ TOPページ - kv
 }
 
 /* kvcopy */
-.kv-wrap .kv-cp .main-cp{
+.kv-wrap .kv-cp .main-cp {
     position: absolute;
-    /* 削除予定 */
-    /* top: 210px;
-    left: 15px; */
     top: 20%;
-    left: 5%;
+    left: 10vw;
+    /* left: 5%; */
 }
 .kv-wrap .kv-cp .sub-cp {
     position: relative;
@@ -724,6 +722,7 @@ pagetop　hover時
 
 
     .kv-wrap .kv-text .main-cp {
+    left: 5vw;
     font-weight: bold;
     font-size: clamp(2rem,5vw,7rem);
     }
