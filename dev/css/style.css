@@ -273,7 +273,7 @@ TOPページ - about
 
 .ab-tx .area-sub {
 margin-bottom: 30px;
-/* white-space: nowrap; */
+white-space: nowrap;
 }
 
 
@@ -808,9 +808,9 @@ pagetop　hover時
     #service.area-wrap .tx-center .area-title,.area-sub {
         margin-bottom: 40px;
     }
-    #service.area-wrap .tx-center .area-sub {
+    /* #service.area-wrap .tx-center .area-sub {
         /* font-size: 1.6rem; */
-    }
+    /* } */ */
     /* Service 123 */
     #service.area-wrap .serivice-area {
         flex-direction: column;
@@ -1003,15 +1003,14 @@ pagetop　hover時
         }
 
 
-
+/* 
         .area-sub {
-            /* font-size: 1.6rem; */
-        }
+            font-size: 1.6rem;
+        } */
         
         .date-area {
         flex-wrap: wrap;
-        gap: 20px;
-        }   
+        }
     
         /*-------------------------------------------
         about
