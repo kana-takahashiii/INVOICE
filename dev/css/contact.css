@@ -203,7 +203,7 @@ input[type="email"] {
 /*-------------------------------------------
 @media Tablet - 768px
 -------------------------------------------*/
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     #article-contact.area-wrap {
         padding: 100px 0;
     }

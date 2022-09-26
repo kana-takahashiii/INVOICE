@@ -707,7 +707,7 @@ pagetop　hover時
 /*-------------------------------------------
 @media Tablet - 768px
 -------------------------------------------*/
-@media screen and (max-width:768px) {
+@media screen and (max-width:1024px) {
     .header {
         /* padding: 36px 85px 37px 85px; */
         width: 90vw;

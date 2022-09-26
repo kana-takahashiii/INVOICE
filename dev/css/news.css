@@ -83,7 +83,7 @@
 /*-------------------------------------------
 @media Tablet - 768px
 -------------------------------------------*/
-    @media screen and (max-width:768px) {
+    @media screen and (max-width:1024px) {
 
     #article-news.area-wrap {
         margin: 0 auto;
