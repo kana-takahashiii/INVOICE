@@ -27,7 +27,10 @@ header
     display: flex;
     justify-content: space-between;
     /* padding: 27px 30px 26px; */
-    padding: 5%;
+    padding: 80vw;
+    padding: 27px 0;
+    margin: 0 aut0;
+
 }
 
 .logo {
@@ -832,6 +835,13 @@ pagetop　hover時
     /* News */
     #news.area-wrap {
         padding: 40px 0;
+        flex-wrap: wrap;
+    }
+
+    #news.area-wrap .date-area {
+        gap: 10px;
+        display: flex;
+        align-items: flex-start;
     }
 
     .top-color-box {
@@ -971,8 +981,12 @@ pagetop　hover時
     @media screen and (max-width:375px) {
         /* header */
         .header {
-            padding: 22px 15px 22px 15px;
+            /* padding: 22px 15px 22px 15px; */
+            width: 90vw;
+            margin: 0 auto;
+            padding: 35px 0;
         }
+
         .header .logo,.footer-wrap .logo{
             width: 83px;
         }
