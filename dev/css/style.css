@@ -125,7 +125,8 @@ PC   TOPページ - about news contact base
     margin-bottom: 45px;
 }
 .area-sub{
-    font-size: 2rem;
+    /* font-size: 2rem; */
+    font-size: clamp(1.4rem,3vw,2rem);
     font-weight: bold;
 }
 
@@ -272,7 +273,7 @@ TOPページ - about
 
 .ab-tx .area-sub {
 margin-bottom: 30px;
-white-space: nowrap;
+/* white-space: nowrap; */
 }
 
 
@@ -808,7 +809,7 @@ pagetop　hover時
         margin-bottom: 40px;
     }
     #service.area-wrap .tx-center .area-sub {
-        font-size: 1.6rem;
+        /* font-size: 1.6rem; */
     }
     /* Service 123 */
     #service.area-wrap .serivice-area {
@@ -1004,7 +1005,7 @@ pagetop　hover時
 
 
         .area-sub {
-            font-size: 1.6rem;
+            /* font-size: 1.6rem; */
         }
         
         .date-area {
@@ -1025,7 +1026,7 @@ pagetop　hover時
             margin-bottom: 20px;
         }
         #aboutus.area-wrap .about-area .ab-tx .area-sub {
-            font-size: 2rem;
+            /* font-size: 2rem; */
             white-space: normal;
         }
 
