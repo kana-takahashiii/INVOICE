@@ -27,10 +27,9 @@ header
     display: flex;
     justify-content: space-between;
     /* padding: 27px 30px 26px; */
-    padding: 80vw;
+    width: 80vw;
     padding: 27px 0;
-    margin: 0 aut0;
-
+    margin: 0 auto;
 }
 
 .logo {
@@ -111,7 +110,7 @@ PC   TOPページ - about news contact base
 -------------------------------------------*/
 .area-wrap {
     margin: 0 auto;
-    width: 80%;
+    width: 80vw;
     max-width: 1100px;
     padding-bottom: 140px;
 }
@@ -601,7 +600,7 @@ footer
 }
 
 #footer .footer-content {
-width: 80%;
+width: 80vw;
 margin: 0 auto;
 padding: 61px 0 62px 0;
 }
