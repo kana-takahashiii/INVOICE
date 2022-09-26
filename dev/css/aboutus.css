@@ -272,7 +272,7 @@ width: 100%;
     }
 
     #article-about.area-wrap,.article-poli {
-    width: calc(100% - 30px);
+    /* width: calc(100% - 30px); */
     margin: 0 auto;
     }
 
@@ -303,7 +303,7 @@ width: 100%;
         margin: 0 22px 0 23px;
     }
     #article-about .article-poli .inner-img {
-        width: calc(100% - 45px);
+        /* width: calc(100% - 45px); */
         margin: 0 auto;
         margin-bottom: 20px;
     }
