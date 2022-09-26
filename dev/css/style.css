@@ -712,7 +712,10 @@ pagetop　hover時
 -------------------------------------------*/
 @media screen and (max-width:768px) {
     .header {
-        padding: 36px 85px 37px 85px;
+        /* padding: 36px 85px 37px 85px; */
+        width: 90vw;
+        padding: 36px 0;
+        margin: 0 auto;
     }
 
     .kv-area {
@@ -980,13 +983,6 @@ pagetop　hover時
 -------------------------------------------*/
     @media screen and (max-width:375px) {
         /* header */
-        .header {
-            /* padding: 22px 15px 22px 15px; */
-            width: 90vw;
-            margin: 0 auto;
-            padding: 35px 0;
-        }
-
         .header .logo,.footer-wrap .logo{
             width: 83px;
         }
