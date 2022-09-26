@@ -860,14 +860,17 @@ pagetop　hover時
     margin-bottom: 40px;
     }
 
+    /* contact */
     #contact.area-wrap {
         padding-bottom: 0;
     }
 
 
     #contact.area-wrap .contact-txt {
-        row-gap: 20px;
+        row-gap: 15px;
+        white-space: nowrap;
     }
+
     #contact.area-wrap .contact-txt .center-btn {
     padding-top: 0;
     }
