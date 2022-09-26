@@ -982,7 +982,8 @@ pagetop　hover時
 /*-------------------------------------------
 @media sp - 375px
 -------------------------------------------*/
-    @media screen and (max-width:375px) {
+    @media screen and (max-width:599px) {
+
         /* header */
         .header .logo,.footer-wrap .logo{
             width: 83px;

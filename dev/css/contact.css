@@ -235,7 +235,8 @@ input[type="email"] {
 /*-------------------------------------------
 @media SP - 375px
 -------------------------------------------*/
-@media screen and (max-width:375px) {
+@media screen and (max-width:599px) {
+
     #article-contact.area-wrap {
         padding: 80px 0;
         width: 90%;

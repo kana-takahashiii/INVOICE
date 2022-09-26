@@ -149,7 +149,8 @@
 /*-------------------------------------------
 @media sp - 375px
 -------------------------------------------*/
-@media screen and (max-width:375px) {
+@media screen and (max-width:599px) {
+
     time {
         margin-right: 10px;
     }
