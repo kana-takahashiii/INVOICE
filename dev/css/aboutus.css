@@ -32,7 +32,7 @@
 
 /* img */
 #article-about .inner-img {
-    /* width: 50%; */
+    width: 50%;
     flex: 1;
 }
 #article-about .inner-img img {
@@ -73,7 +73,8 @@ padding: 0 60px 0 0;
     margin-bottom: 33px;
 } 
 .inner-text .p-fx .line {
-    width: 100px;
+    /* width: 100px; */
+    width: 50px;
     height: 1px;
     background-color:#333333;
 }
@@ -104,7 +105,8 @@ Corporate information
 }
 #info .inner-info {
     margin: 0 auto;
-    width: 60%;
+    width: 50%;
+    /* width: 60%; */
     display: flex;
     row-gap: 39px;
     flex-direction: column;
